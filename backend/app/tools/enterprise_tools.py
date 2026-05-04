@@ -26,8 +26,35 @@ def process_refund(transaction_id: str, reason: str) -> str:
     return f"Refund for transaction {transaction_id} successfully initiated. Reason: {reason}. Status: PENDING APPROVAL."
 
 @tool
+def check_data_usage(user_id: str) -> str:
+    """Checks the user's mobile data usage (e.g., '15GB used of 20GB')."""
+    usage = random.randint(1, 20)
+    limit = 20
+    return f"User {user_id} has used {usage}GB of their {limit}GB monthly data limit."
+
+@tool
+def change_roaming_plan(user_id: str, country: str, plan_type: str = "Standard") -> str:
+    """Activates an international roaming data plan for a specific country."""
+    return f"International Roaming ({plan_type}) has been successfully activated for user {user_id} in {country}. Effective immediately."
+
+@tool
+def resolve_technical_issue(issue_type: str) -> str:
+    """Provides automated troubleshooting steps for common technical issues like 'No Network' or 'App Crashing'."""
+    if "network" in issue_type.lower():
+        return "Steps sent to user: 1. Toggle Airplane Mode, 2. Reset Network Settings, 3. Check for local outage in Pisa."
+    return f"Automated diagnostics initiated for '{issue_type}'. Connection reset sent to the device."
+
+@tool
 def escalate_to_human(reason: str) -> str:
     """Escalates the conversation to a human representative when the AI cannot resolve the issue."""
     return f"Conversation escalated to a human expert. Reason: {reason}. A representative will be with you shortly."
 
-tools = [check_account_balance, get_billing_statement, process_refund, escalate_to_human]
+tools = [
+    check_account_balance, 
+    get_billing_statement, 
+    process_refund, 
+    check_data_usage, 
+    change_roaming_plan, 
+    resolve_technical_issue, 
+    escalate_to_human
+]

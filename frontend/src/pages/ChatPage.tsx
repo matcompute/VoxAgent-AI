@@ -97,14 +97,14 @@ export default function ChatPage() {
 
       {/* Quick Actions */}
       <div style={{ padding: '12px 20px', display: 'flex', gap: '10px', overflowX: 'auto', borderBottom: '1px solid var(--border-color)' }}>
-        <button className="btn btn-secondary" style={{ fontSize: '12px', whiteSpace: 'nowrap' }}>
-          <CreditCard size={14} /> Check Balance
+        <button className="btn btn-secondary" style={{ fontSize: '12px', whiteSpace: 'nowrap' }} onClick={() => setInput("Can you check my data usage for user_123?")}>
+          <LifeBuoy size={14} /> Check Data
         </button>
-        <button className="btn btn-secondary" style={{ fontSize: '12px', whiteSpace: 'nowrap' }}>
+        <button className="btn btn-secondary" style={{ fontSize: '12px', whiteSpace: 'nowrap' }} onClick={() => setInput("I am having network issues, can you help?")}>
+          <ShieldCheck size={14} /> Tech Support
+        </button>
+        <button className="btn btn-secondary" style={{ fontSize: '12px', whiteSpace: 'nowrap' }} onClick={() => setInput("What was the amount of my February bill?")}>
           <Receipt size={14} /> Billing Query
-        </button>
-        <button className="btn btn-secondary" style={{ fontSize: '12px', whiteSpace: 'nowrap' }}>
-          <LifeBuoy size={14} /> Support Ticket
         </button>
       </div>
 
