@@ -44,5 +44,18 @@ VoxAgent is not just another chatbot. It is a fully autonomous **Agentic System*
    ```
 4. Access the portal at `http://localhost:5173`.
 
-## 📈 Why VoxAgent?
-In the modern enterprise, "Chat" is the interface, but "Agents" are the execution engine. VoxAgent demonstrates a production-ready pattern for building AI that doesn't just talk, but **works**.
+## ⚖️ Regulatory Compliance (Italy & EU)
+
+VoxAgent is engineered specifically for highly regulated Italian sectors (Banking & Telecommunications) and adheres to the following standards:
+
+*   🇮🇹 **Legge 132/2025 (Italian AI Law):** Built with "Human-in-the-Loop" architecture and full transparency requirements. Every decision is auditable.
+*   🇪🇺 **EU AI Act (2026):** Classified as a "High-Risk" compliant system with strict data governance and risk mitigation protocols.
+*   🏦 **DORA (Digital Operational Resilience Act):** Meets ICT risk management requirements for European financial entities.
+*   🛡️ **GDPR:** Zero-training policy on customer data. All PII is handled within the enterprise perimeter.
+
+## 🔍 Zero-Hallucination Architecture
+
+Unlike generic LLMs, VoxAgent uses a **Restricted Reasoning Loop**:
+1.  **Grounding:** The AI only uses data retrieved from verified Enterprise Tools.
+2.  **Traceability:** Every response includes a "Reasoning Log" showing which tool was called and the raw output received.
+3.  **Confidence Scoring:** If a request falls outside of its 95% confidence threshold, the system triggers a mandatory **Human Escalation**.

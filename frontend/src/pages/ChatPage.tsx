@@ -130,11 +130,16 @@ export default function ChatPage() {
                 {m.action && (
                   <div style={{ 
                     marginTop: '12px', padding: '8px', background: 'rgba(0,0,0,0.2)', 
-                    borderRadius: '8px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '8px',
-                    color: 'var(--accent-primary)'
+                    borderRadius: '8px', fontSize: '11px', display: 'flex', flexDirection: 'column', gap: '4px',
+                    color: 'var(--accent-primary)', border: '1px solid rgba(56, 189, 248, 0.2)'
                   }}>
-                    <div className="spinner" style={{ width: '12px', height: '12px', border: '2px solid var(--accent-primary)', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
-                    {m.action}
+                    <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'uppercase', opacity: 0.8 }}>
+                      ⚖️ Compliance Audit Trace
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <div className="spinner" style={{ width: '10px', height: '10px', border: '2px solid var(--accent-primary)', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
+                      {m.action}
+                    </div>
                   </div>
                 )}
               </div>
